@@ -1,0 +1,13 @@
+Package: tarsila-chromium
+Version: 2.0.0
+Section: web
+Priority: optional
+Architecture: all
+Depends: chromium, mpv, yt-dlp, curl
+Recommends: fonts-roboto, fonts-open-sans, fonts-lato, fonts-montserrat, fonts-inter, fonts-noto-core
+Maintainer: Piano Lab Ribeirao <adm@pianolabribeirao.com.br>
+Description: Chromium otimizado para o Tarsila OS
+ Navegador Chromium com flags de runtime otimizadas para hardware ARM de
+ baixo recurso (2GB RAM), extensao Modo Cinema (mpv), Modo Leve (CSS),
+ otimizacao de imagens (lazy decode) e bloqueio de anuncios DNR.
+ Inclui o launcher tarsila-chromium e a extensao cinema-ext.
