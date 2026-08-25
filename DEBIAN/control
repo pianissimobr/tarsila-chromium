@@ -6,6 +6,7 @@ Architecture: all
 Depends: chromium, mpv, yt-dlp, curl
 Recommends: fonts-roboto, fonts-open-sans, fonts-lato, fonts-montserrat, fonts-inter, fonts-noto-core
 Maintainer: Piano Lab Ribeirao <adm@pianolabribeirao.com.br>
+Homepage: https://pianolabribeirao.com.br
 Description: Chromium otimizado para o Tarsila OS
  Navegador Chromium com flags de runtime otimizadas para hardware ARM de
  baixo recurso (2GB RAM), extensao Modo Cinema (mpv), Modo Leve (CSS),
