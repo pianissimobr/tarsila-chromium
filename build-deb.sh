@@ -2,7 +2,12 @@
 set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PKG="tarsila-chromium"
-V="${1:-2.0.0}"
+# A versao vem do DEBIAN/control, que e a fonte unica. Escrita a mao aqui
+# tambem, ela vira duas verdades que envelhecem separado -- foi o que
+# aconteceu: o control ja dizia 1.0.0 e o pacote saia chamado 2.0.0, com o
+# numero certo por dentro e o errado no nome do arquivo.
+V="${1:-$(sed -n 's/^Version: *//p' "$SCRIPT_DIR/DEBIAN/control" | head -1)}"
+[ -n "$V" ] || { echo "ERRO: sem Version: em DEBIAN/control" >&2; exit 1; }
 DEB="${PKG}_${V}_all.deb"
 D="$(mktemp -d)"
 trap 'rm -rf "$D"' EXIT
